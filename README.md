@@ -3,6 +3,9 @@
 This is a simple library and test on building a EventMachine like interface
 for implementing servers in C++. The Naming conventions should be familiar.
 The implementation uses the very known libevent for implementing the reactor.
+
+## Echo server sample
+
 Here is a simple Application starting an Echo Server on port 9002.
 
     #include "net.h"
@@ -30,6 +33,8 @@ Here is a simple Application starting an Echo Server on port 9002.
         return 1;
       }
     }
+    
+## HTTP server sample
 
 This is another sample application implementing an http server:
 
@@ -58,9 +63,11 @@ This is another sample application implementing an http server:
       }
     }
 
+## Running more servers
+
 Both Servers can easily run at the same time:
 
-#include "net.h"
+    #include "net.h"
 
     class EchoConnection : public Net::Connection {
     public:
